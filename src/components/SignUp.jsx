@@ -1,16 +1,14 @@
 const SignUp = () => {
 	return (
-		<div className="signup">
-				<h1>SignUp</h1>
-				<input type="text" placeholder="Enter name" className=""/>
-				<input type="email" placeholder="Enter Email" />
-				<input type="password" placeholder="Enter password" />
-				<input type="password" placeholder="Confirm password" />
-				<button>SignUp</button>
-				or
-				<div>
-					Continue with Google
-				</div>
+		<div className="home_account">
+			<h1>CREATE ACCOUNT</h1>
+			<input type="text" placeholder="Enter name" className="info" />
+			<input type="email" placeholder="Enter Email" className="info" />
+			<input type="password" placeholder="Enter password" className="info" />
+			<input type="password" placeholder="Confirm password" className="info" />
+			<button className="login_button">SignUp</button>
+			or
+			<div className="login_google">Continue with Google</div>
 		</div>
 	);
 };
