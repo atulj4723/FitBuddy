@@ -1,6 +1,7 @@
 import Login from "./components/Login";
 import SignUp from "./components/SignUp";
 import "./App.css";
+import { Route,Routes } from "react-router-dom";
 import Home from "./components/Home";
 import Footer from "./components/Footer";
 import Diet from "./components/Diet";
@@ -16,9 +17,10 @@ import Profile from "./components/Profile";
 import Streake from "./components/Streake";
 function App() {
 	return (
-		<div className="App">
-			<SignUp />
-		</div>
+		<Routes>
+			<Route path="/" element={<Login/>}/>
+			<Route path="/home" element={<Home/>}/>
+		</Routes>
 	);
 }
 export default App;
