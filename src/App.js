@@ -1,24 +1,29 @@
-import Login from "./components/Login";
-import SignUp from "./components/SignUp";
+import Login from "./pages/Login";
+import SignUp from "./pages/SignUp";
 import "./App.css";
-import Home from "./components/Home";
-import Footer from "./components/Footer";
-import Diet from "./components/Diet";
-import AllWorkout from "./components/AllWorkout";
-import Height from "./components/Height";
-import Weight from "./components/Weight";
-import Diease from "./components/Diease";
-import WorkOutCard from "./components/WorkOutCard";
-import WorkOutDisplay from "./components/WorkOutDisplay";
-import FoodCard from "./components/FoodCard";
-import FoodDisplay from "./components/FoodDisplay";
-import Profile from "./components/Profile";
-import Streake from "./components/Streake";
+import { Route, Routes } from "react-router-dom";
+import Home from "./pages/Home";
+import Diet from "./pages/Diet";
+import Workout from "./pages/Workout";
+import Schedule from "./pages/Schedule";
+import WorkOutDisplay from "./pages/WorkOutDisplay";
+import DietDisplay from "./pages/DietDisplay";
+import PageNotFound from "./pages/PageNotFound";
+import Profile from "./pages/Profile";
 function App() {
 	return (
-		<div className="App">
-			<SignUp />
-		</div>
+		<Routes>
+			<Route path="/" element={<SignUp />} />
+			<Route path="/home" element={<Home />} />
+			<Route path="/diet" element={<Diet />} />
+			<Route path="/login" element={<Login />} />
+			<Route path="/workout" element={<Workout />} />
+			<Route path="/workoutdetails/:id" element={<WorkOutDisplay />} />
+			<Route path="/dietdetails/:id" element={<DietDisplay />} />
+			<Route path="/schedule" element={<Schedule />} />
+			<Route path="/profile" element={<Profile />} />
+			<Route path="/*" element={<PageNotFound />} />
+		</Routes>
 	);
 }
 export default App;
