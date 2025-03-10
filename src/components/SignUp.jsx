@@ -1,7 +1,6 @@
 const SignUp = () => {
 	return (
 		<div className="home_account">
-			<div className="page">
 			<h1>CREATE ACCOUNT</h1>
 			<input type="text" placeholder="Enter name" className="info" />
 			<input type="email" placeholder="Enter Email" className="info" />
@@ -10,7 +9,7 @@ const SignUp = () => {
 			<button className="login_button">SignUp</button>
 			or
 			<div className="login_google">Continue with Google</div>
-		</div></div>
+		</div>
 	);
 };
 export default SignUp;

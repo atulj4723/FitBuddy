@@ -1,7 +1,6 @@
 import Footer from "./Footer";
 
 const Home = () => {
-	alert(process.env.REACT_APP_API_BASE_URL)
 	return (
 		<div className="Home">
 			<div className="name">
@@ -13,10 +12,9 @@ const Home = () => {
 				<a href="/Signup.jsx" className="Home_a_s">
 					CREATE ACCOUNT
 				</a>
-				{process.env.REACT_APP_API_BASE_URL}
 				<p className="account_l">
 					Already a member ?
-					<a href="/" className="Home_a_l">
+					<a href="/Login.jsx" className="Home_a_l">
 						LOGIN
 					</a>
 				</p>
