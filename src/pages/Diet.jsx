@@ -1,5 +1,9 @@
-import DietCard from "../components/DietCard"
-const Diet=()=>{
-    return<></>
-}
+import DietCard from "../components/DietCard";
+const Diet = () => {
+    return (
+        <>
+            <DietCard />
+        </>
+    );
+};
 export default Diet;

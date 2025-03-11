@@ -117,3 +117,20 @@ body {
 .login_google:hover {
 	color: rgb(214, 109, 109);
 }
+/* Hide arrows in Chrome, Safari, Edge, and Opera */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Hide arrows in Firefox */
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+.select{
+	background-color: red;
+}
+.no{
+	background-color: yellow;
+}

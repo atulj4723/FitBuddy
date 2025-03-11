@@ -1,6 +1,6 @@
-import Footer from "./Footer";
+import Footer from "../components/Footer";
 
-const Home = () => {
+const Introduction = () => {
 	return (
 		<div className="Home">
 			<div className="name">
@@ -9,12 +9,12 @@ const Home = () => {
 			</div>
 			<div className="account">
 				<p>Ready to sign up ?</p>
-				<a href="/Signup.jsx" className="Home_a_s">
+				<a href="/signup" className="Home_a_s">
 					CREATE ACCOUNT
 				</a>
 				<p className="account_l">
 					Already a member ?
-					<a href="/Login.jsx" className="Home_a_l">
+					<a href="/login" className="Home_a_l">
 						LOGIN
 					</a>
 				</p>
@@ -22,4 +22,4 @@ const Home = () => {
 		</div>
 	);
 };
-export default Home;
+export default Introduction;

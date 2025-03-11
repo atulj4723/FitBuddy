@@ -1,13 +1,20 @@
-const Diet = () => {
-	return (
-		<div className="">
-			<ul>morning</ul>
-            <ul></ul>
-            <ul></ul>
-            <ul></ul>
-            <ul></ul>
-            <ul></ul>
-		</div>
-	);
+const Diet = ({ setDiet, diet }) => {
+    const list = ["vegeaterian", "eggeaterian", "nonvegeaterian"];
+    
+    return (
+        <div className="">
+            {list.map((cur, idx) => {
+                return (
+                    <div
+                    className={`${diet==cur?"select":"no"}`}
+                        onClick={() => {
+                            setDiet(cur);
+                        }}>
+                        {cur}
+                    </div>
+                );
+            })}
+        </div>
+    );
 };
 export default Diet;
