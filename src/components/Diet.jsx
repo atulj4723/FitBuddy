@@ -6,6 +6,7 @@ const Diet = ({ setDiet, diet }) => {
             {list.map((cur, idx) => {
                 return (
                     <div
+                    key={idx}
                     className={`${diet==cur?"select":"no"}`}
                         onClick={() => {
                             setDiet(cur);

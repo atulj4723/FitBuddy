@@ -1,11 +1,11 @@
 const Footer = () => {
 	return (
-		<div className="footer">
-			<ul>Home</ul>
-            <ul>Diet</ul>
-            <ul>Workout</ul>
-            <ul>Schedule</ul>
-		</div>
+		<footer>
+			<a href="/home" className="icon">Home</a>
+			<a href="/diet" className="icon">Diet</a>
+			<a href="/workout" className="icon">Workout</a>
+			<a href="/schedule" className="icon">Schedule</a>
+		</footer>
 	);
 };
 export default Footer;

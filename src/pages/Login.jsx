@@ -43,7 +43,7 @@ const Login = () => {
         }
     };
     return (
-        <div className="home_account">
+        <div className="Intro_account">
             <div className="page">
                 <h1>Welcome Back</h1>
                 <br />

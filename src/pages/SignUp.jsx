@@ -27,7 +27,7 @@ const SignUp = () => {
             });
     };
     return (
-        <div className="home_account">
+        <div className="Intro_account">
             <div className="page">
                 <h1>CREATE ACCOUNT</h1>
                 <input

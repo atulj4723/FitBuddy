@@ -10,8 +10,9 @@ body {
 	align-items: center;
 	justify-content: center;
 	background-position: center;
+	font-family: cursive;
 }
-.Home {
+.Introduction {
 	width: 100%;
 	height: 100vh;
 	text-align: center;
@@ -22,15 +23,15 @@ body {
 	align-items: center;
 }
 
-.Home_h2 {
+.Intro_h2 {
 	font-size: 5vw;
 	color: #2c3e50;
 	margin-top: 10%;
 }
 
-.Home_h1 {
+.Intro_h1 {
 	font-size: 10vw;
-	color: #e74c3c;
+	color: rgb(255, 0, 0);
 }
 
 .account {
@@ -44,29 +45,29 @@ body {
 	margin-bottom: 10px;
 }
 
-.Home_a_s {
+.Intro_a_s {
 	display: inline-block;
 	text-decoration: none;
 	color: white;
-	background-color: #e74c3c;
+	background-color: rgb(255, 0, 0);
 	padding: 10px 15px;
 	border-radius: 5px;
 	transition: background 0.3s ease-in-out;
 }
-.Home_a_l {
+.Intro_a_l {
 	text-decoration: none;
 }
 
-.Home_a_s:hover,
-.Home_a_l:hover {
-	background-color: #c0392b;
+.Intro_a_s:hover,
+.Intro_a_l:hover {
+	background-color: rgb(255, 0, 0);
 }
 
 .account_l {
 	margin-top: 10px;
 }
 
-.home_account {
+.Intro_account {
 	width: 100%;
 	height: 100vh;
 	display: flex;
@@ -117,20 +118,54 @@ body {
 .login_google:hover {
 	color: rgb(214, 109, 109);
 }
+footer {
+	background-color: rgb(255, 0, 0);
+	position: absolute;
+	bottom: 0%;
+	display: flex;
+	width: 100%;
+	height: 45px;
+	align-items: center;
+	justify-content: space-evenly;
+}
+.icon {
+	color: white;
+	text-decoration: none;
+}
+header {
+	width: 100%;
+	height: 45px;
+	position: absolute;
+	top: 0%;
+	background-color: rgb(255, 0, 0);
+	padding-inline: 5px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	color: white;
+}
+.header_right {
+	height: 30px;
+	width: 30px;
+	border-color: white;
+	background-color: white;
+	border-radius: 50%;
+}
+
 /* Hide arrows in Chrome, Safari, Edge, and Opera */
 input[type="number"]::-webkit-outer-spin-button,
 input[type="number"]::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
+	-webkit-appearance: none;
+	margin: 0;
 }
 
 /* Hide arrows in Firefox */
 input[type="number"] {
-    -moz-appearance: textfield;
+	-moz-appearance: textfield;
 }
-.select{
-	background-color: red;
+.select {
+	background-color: #d32f2f;
 }
-.no{
-	background-color: yellow;
+.no {
+	background-color: #f3eeed;
 }

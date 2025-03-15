@@ -1,10 +1,10 @@
-const FoodCard = () => {
-	return <>
-    <div className="card-container"> 
-      <img src="" alt="" />
-      <h1>Food name</h1>
-      <h2>Food calaries</h2>
-</div>
-</>;
+const DietCard = ({ food }) => {
+	return (
+		<div>
+			<img src={food.image} alt="" />
+			<h1>{food.name}</h1>
+			<h2>{food.calories}</h2>
+		</div>
+	);
 };
-export default FoodCard;
+export default DietCard;
