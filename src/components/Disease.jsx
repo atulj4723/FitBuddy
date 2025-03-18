@@ -15,8 +15,8 @@ const Disease = ({ disease, setDisease }) => {
 				})
 			);
 		} else {
-			setDisease([...disease, item]);
-		}
+			setDisease([...disease, item]);	
+		}	
 	};
 	const handleAdd = () => {
 		const temp = addDisease.trim().toLowerCase();

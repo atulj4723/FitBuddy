@@ -3,9 +3,12 @@ import Footer from "../components/Footer";
 const Introduction = () => {
 	return (
 		<div className="Introduction">
+			<div>
+				<img src="/public/images/intro.png"></img>
+			</div>
 			<div className="name">
-				<h2 className="Intro_h2"> WELCOME TO </h2>
 				<h1 className="Intro_h1">FIT BUDDY</h1>
+				<pre className="Intro_h2"><b>"Y O U R  F I T N E S S  J O U R N E Y  S T A R T S  H E R E !"</b></pre>
 			</div>
 			<div className="account">
 				<p>Ready to sign up ?</p>
@@ -14,9 +17,9 @@ const Introduction = () => {
 				</a>
 
 				<p className="account_l">
-					Already a member ?
+					Already a member?<pra> </pra>
 					<a href="/login" className="Intro_a_l">
-						LOGIN
+						Log In
 					</a>
 				</p>
 			</div>

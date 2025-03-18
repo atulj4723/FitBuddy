@@ -15,27 +15,27 @@ import Introduction from "./pages/Introduction";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 function App() {
-	return (
-		<>
-			<Routes>
-				<Route path="/SignUp" element={<SignUp />} />
-				<Route path="/" element={<Introduction />} />
-				<Route path="/home" element={<Home />} />
-				<Route path="/diet" element={<Diet />} />
-				<Route path="/data" element={<Data />} />
-				<Route path="/login" element={<Login />} />
-				<Route path="/workout" element={<Workout />} />
-				<Route path="/workout/:id" element={<WorkOutDisplay />} />
-				<Route path="/diet/:id" element={<DietDisplay />} />
-				<Route path="/schedule" element={<Schedule />} />
-				<Route path="/profile" element={<Profile />} />
-				<Route path="/*" element={<PageNotFound />} />
-				<Route path="/temp" element={<></>}/>
-			</Routes>
-			<Header />
-			<Footer />
+    return (
+        <>
+            <Header />
+            <Routes>
+                <Route path="/SignUp" element={<SignUp />} />
+                <Route path="/" element={<Introduction />} />
+                <Route path="/home" element={<Home />} />
+                <Route path="/diet" element={<Diet />} />
+                <Route path="/data" element={<Data />} />
+                <Route path="/login" element={<Login />} />
+                <Route path="/workout" element={<Workout />} />
+                <Route path="/workout/:id" element={<WorkOutDisplay />} />
+                <Route path="/diet/:id" element={<DietDisplay />} />
+                <Route path="/schedule" element={<Schedule />} />
+                <Route path="/profile" element={<Profile />} />
+                <Route path="/*" element={<PageNotFound />} />
+                <Route path="/temp" element={<></>} />
+            </Routes>
 
-		</>
-	);
+            
+        </>
+    );
 }
 export default App;
