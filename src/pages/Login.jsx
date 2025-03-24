@@ -3,14 +3,14 @@ import { useContext, useState ,useEffect} from "react";
 import { auth, db } from "../Firebase";
 import { useNavigate } from "react-router-dom";
 import { DataContext } from "../DataContext";
-import { ref, get, child } from "firebase/database";
+import { ref, get } from "firebase/database";
 const Login = () => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [errorMessage, setErrorMessage] = useState("");
     const [loading, setLoading] = useState(false);
     const navigate = useNavigate();
-    const { data, setData } = useContext(DataContext);
+    const {  setData } = useContext(DataContext);
 useEffect(()=>{
     setTimeout(()=>{
         setErrorMessage("");
@@ -28,15 +28,14 @@ useEffect(()=>{
                 password
             );
             const user = userCredential.user;
-            const userRef = ref(db, user.uid);
             if (user.emailVerified) {
                 const userRef = ref(db, user.uid);
                 const snapshot = await get(userRef);
                 if (snapshot.exists()) {
                     setData(snapshot.val());
                     const userData=snapshot.val();
-                    if(userData.height!=0){
-                        navigate("/home");
+                    if(userData.height!==0){
+                        navigate("/");
                         }else{
                         navigate("/data")}
                 } else {
