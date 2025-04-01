@@ -16,11 +16,9 @@ const Data = () => {
     const [diet, setDiet] = useState("");
     const [step, setStep] = useState(0);
     const [goal, setGoal] = useState("");
-    const [saving, setSaving] = useState(false);
     const { data } = useContext(DataContext);
     useEffect(() => {
         if (height !== 0 && weight !== 0 && diet !== "" && step === 7) {
-            setSaving(true);
             set(ref(db, data.id), {
                 id: data.id,
                 username: data.name,
@@ -31,13 +29,12 @@ const Data = () => {
                 preferedDiet: "[]",
                 preferedWorkOut: "[]",
             });
-            setSaving(false);
         }
-    }, [step]);
+    }, [step, data, height, weight, diet, disease]);
     const dietList = DietData.map((cur) => {
         return cur.name;
     });
-    if (step == 5) {
+    if (step === 5) {
         ChatGptDiet(dietList, disease, height, weight, goal)
             .then((filtered) => {
                 console.log("Filtered Diet Items:", filtered);
@@ -65,7 +62,7 @@ const Data = () => {
                     <ul>Diet:{diet}</ul>
                     <ul>
                         Disease:
-                        {disease.length == 0
+                        {disease.length === 0
                             ? "No Diseases"
                             : disease.join(",")}
                     </ul>

@@ -1,5 +1,4 @@
-async function ChatGptDiet(dietList, disease, height, weight, goal) {
- 
+async function ChatGptDiet(dietList, diseaseList, height, weight, goal) {
     try {
         const response = await fetch(
             "https://api.openai.com/v1/chat/completions",
@@ -7,36 +6,55 @@ async function ChatGptDiet(dietList, disease, height, weight, goal) {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
-                    // Correct interpolation of env variable
-                    Authorization: `Bearer ${process.env.REACT_APP_OPENAI_KEY}`,
+                    Authorization: `Bearer ${process.env.REACT_APP_OPENAI_KEY}`, // Keep this secret and use securely!
                 },
                 body: JSON.stringify({
-                    model: "gpt-4o-mini", // GPT-4o or gpt-4 — double check model name; gpt-4o-mini does not exist
+                    model: "gpt-4o-mini", // Use "gpt-4o" or fallback to "gpt-3.5-turbo"
+                    
                     messages: [
                         {
                             role: "system",
                             content:
-                                "You are a nutritionist AI. You will filter an array of diet items based on specific health conditions, body measurements, and goals. First, you MUST analyze each item. Then, return ONLY the filtered array in **valid JSON** format. No extra text or explanation.",
+                                `You are an expert nutritionist AI. Your task is to filter a list of diet items for individuals with specific health conditions, body metrics, and dietary goals.\n\n` +
+                                `Instructions:\n` +
+                                `- Evaluate EACH diet item carefully for suitability.\n` +
+                                `- Use evidence-based nutritional knowledge for filtering.\n` +
+                                `- Filter OUT items that are unsuitable for the given health conditions or goals.\n` +
+                                `- ONLY return a valid JSON array of suitable items. DO NOT include any explanation, extra text, or formatting.\n` +
+                                `- Ensure JSON is valid and parsable. No markdown or comments.`,
                         },
                         {
                             role: "user",
-                            content: `Here is an array of diet items:\n${JSON.stringify(
-                                dietList
-                            )}\n\nEvaluate each item carefully for the following individual:\nWeight: ${weight} kg\nHeight: ${height} cm\nHealth Conditions: ${disease.join(
-                                ", "
-                            )}\nGoal: ${goal}\n\nReturn ONLY the filtered array in valid JSON format. Do not exclude suitable items. Double-check for missing items.`,
+                            content:
+                                `Input Data:\n` +
+                                `Diet Items: ${JSON.stringify(dietList)}\n\n` +
+                                `User Profile:\n` +
+                                `- Weight: ${weight} kg\n` +
+                                `- Height: ${height} cm\n` +
+                                `- Health Conditions: ${
+                                    Array.isArray(diseaseList)
+                                        ? diseaseList.join(", ")
+                                        : diseaseList
+                                }\n` +
+                                `- Goal: ${goal}\n\n` +
+                                `Task:\nReturn ONLY the filtered array of suitable diet items in valid JSON format.`,
                         },
                     ],
+                    max_tokens: 800,
+                    temperature: 0.3,
                 }),
             }
         );
 
         const data = await response.json();
 
-        // Defensive parsing - handle common GPT quirks like wrapping in markdown or adding text
+        if (!response.ok) {
+            console.error("OpenAI API error:", data);
+            throw new Error(data.error?.message || "OpenAI API call failed.");
+        }
         let filteredArrayString = data.choices[0].message.content.trim();
 
-        // Remove markdown code block markers if present
+        // Sanitize any Markdown wrapping
         if (filteredArrayString.startsWith("```")) {
             filteredArrayString = filteredArrayString
                 .replace(/```(?:json)?/g, "")
@@ -45,6 +63,12 @@ async function ChatGptDiet(dietList, disease, height, weight, goal) {
         }
 
         const filteredDiet = JSON.parse(filteredArrayString);
+
+        // Validate array
+        if (!Array.isArray(filteredDiet)) {
+            throw new Error("Invalid JSON response: Not an array.");
+        }
+
         return filteredDiet;
     } catch (error) {
         console.error("Error filtering diet with AI:", error);

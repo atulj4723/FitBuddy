@@ -43,48 +43,20 @@ function App() {
 
     return (
         <>
-            {user ? (
-                <>
-                    <Header />
-                    <Footer />
-                </>
-            ) : (
-                <></>
-            )}
+            
             <Routes>
-                {!user ? (
-                    <>
-                        <Route path="/" element={<Introduction />} />
-                        <Route path="/signup" element={<SignUp />} />
-                        <Route path="/login" element={<Login />} />
-                        <Route path="/*" element={<Navigate to="/" />} />
-                    </>
-                ) : data ? (
-                    data.height === 0 ? (
-                        <>
-                            <Route path="/" element={<Data />} />
-                            <Route path="/data" element={<Data />} />
-                            <Route path="/*" element={<Navigate to="/" />} />
-                        </>
-                    ) : (
-                        <>
-                            <Route path="/" element={<Home />} />
-                            <Route path="/diet" element={<Diet />} />
-                            <Route path="/data" element={<Data />} />
-                            <Route path="/workout" element={<Workout />} />
-                            <Route
-                                path="/workout/:id"
-                                element={<WorkOutDisplay />}
-                            />
-                            <Route path="/diet/:id" element={<DietDisplay />} />
-                            <Route path="/schedule" element={<Schedule />} />
-                            <Route path="/profile" element={<Profile />} />
-                            <Route path="/*" element={<PageNotFound />} />
-                        </>
-                    )
-                ) : null}
+                <Route path="/" element={<Introduction />} />
+                <Route path="/signup" element={<SignUp />} />
+                <Route path="/login" element={<Login />} />
+                <Route path="/data" element={<Data />} />
+                <Route path="/diet" element={<Diet />} />
+                <Route path="/workout" element={<Workout />} />
+                <Route path="/workout/:id" element={<WorkOutDisplay />} />
+                <Route path="/diet/:id" element={<DietDisplay />} />
+                <Route path="/schedule" element={<Schedule />} />
+                <Route path="/profile" element={<Profile />} />
+                <Route path="/*" element={<PageNotFound />} />
             </Routes>
-          
         </>
     );
 }

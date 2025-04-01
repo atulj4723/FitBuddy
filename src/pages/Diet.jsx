@@ -2,7 +2,7 @@ import DietCard from "../components/DietCard";
 import DietData from "../data/DietData";
 const Diet = () => {
     return (
-        <div>
+        <div className="diet_card">
             {DietData.map((food, index) => (
                 <DietCard key={index} food={food} />
             ))}
