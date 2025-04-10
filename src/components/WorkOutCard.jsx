@@ -1,10 +1,10 @@
-const WorkOutCard = () => {
+const WorkOutCard = ({exercise}) => {
 	return (
 		<>
-			<img src="yugf" />
-            <h1>workoutname</h1>
-            <h2>WorkOut muscle</h2>
-            <h1>Workout bodypart</h1>
+			<img src={exercise.gifUrl} alt={exercise.name}/>
+            <h1>{exercise.name}</h1>
+            <h2>{exercise.secondaryMuscles.join(",")}</h2>
+            <h1>{exercise.bodyPart}</h1>
 		</>
 	);
 };

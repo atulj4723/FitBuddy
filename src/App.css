@@ -183,13 +183,14 @@ header {
     background-color: white;
     border-radius: 50%;
 }
-.diet_card {
-    background: white;
-    width: 300px;
+.dietcard {
+    background: rgb(255, 255, 255);
+    width: 250px;
+    height: 250px;
     padding: 15px;
     border-radius: 10px;
-    border-color: black;
     text-align: center;
+    border:2px solid black;
     transition: transform 0.3s ease-in-out;
 }
 
@@ -200,16 +201,17 @@ header {
 .diet_img {
     height: 100px;
 }
-.diet_name {
-    
+.dietcard diet_name {
+    font-size: 5%;
+    text-transform: uppercase;
 }
-.diet_calories {
-	
+.dietcard diet_calories {
+	font-size: 2%;
 }
-.diet_page {
+.diet_card {
     display: grid;
-    gap: 10px;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 210px));
+    gap: 1%;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 }
 /* Hide arrows in Chrome, Safari, Edge, and Opera */
 input[type="number"]::-webkit-outer-spin-button,

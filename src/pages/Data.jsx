@@ -9,6 +9,8 @@ import { DataContext } from "../DataContext";
 import ChatGptDiet from "../ai/ChatGptDiet";
 import DietData from "../data/DietData";
 import Goal from "../components/Goal";
+import ChatGptWorkout from "../ai/ChatGptWorkOut";
+import WorkoutData from "../data/WorkoutData";
 const Data = () => {
     const [disease, setDisease] = useState([]);
     const [height, setHeight] = useState(0);
@@ -17,8 +19,14 @@ const Data = () => {
     const [step, setStep] = useState(0);
     const [goal, setGoal] = useState("");
     const { data } = useContext(DataContext);
+    const [preferedDiet, setPreferedDiet] = useState([]);
+    const [preferedWorkOut, setPreferedWorkOut] = useState([]);
+    const [saveData, setSaveData] = useState(false);
+    const dietList = DietData.map((cur) => cur.name);
+    const exerciseList = WorkoutData.map((cur) => cur.name);
+
     useEffect(() => {
-        if (height !== 0 && weight !== 0 && diet !== "" && step === 7) {
+        if (saveData) {
             set(ref(db, data.id), {
                 id: data.id,
                 username: data.name,
@@ -26,23 +34,46 @@ const Data = () => {
                 weight: weight,
                 diet: diet,
                 disease: JSON.stringify(disease),
-                preferedDiet: "[]",
-                preferedWorkOut: "[]",
+                preferedDiet: JSON.stringify(preferedDiet),
+                preferedWorkOut: JSON.stringify(preferedWorkOut),
+                goal: goal,
             });
         }
     }, [step, data, height, weight, diet, disease]);
-    const dietList = DietData.map((cur) => {
-        return cur.name;
-    });
-    if (step === 5) {
-        ChatGptDiet(dietList, disease, height, weight, goal)
-            .then((filtered) => {
-                console.log("Filtered Diet Items:", filtered);
-            })
-            .catch((err) => {
-                console.error(err.message);
-            });
-    }
+    useEffect(() => {
+        if (
+            step === 5 &&
+            weight > 0 &&
+            height > 0 &&
+            diet.length > 0 &&
+            goal.length > 0
+        ) {
+            const load_data = async () => {
+                try {
+                    const filteredDiet = await ChatGptDiet(
+                        dietList,
+                        disease,
+                        height,
+                        weight,
+                        goal
+                    );
+                    setPreferedDiet(filteredDiet);
+                    const filteredWorkout = await ChatGptWorkout(
+                        exerciseList,
+                        height,
+                        weight,
+                        disease,
+                        goal
+                    );
+                    setPreferedWorkOut(filteredWorkout);
+                    setSaveData(true); // Trigger Firebase save
+                } catch (error) {
+                    console.error("Error fetching AI data:", error.message);
+                }
+            };
+            load_data();
+        }
+    }, [step, weight, height, diet, goal, dietList, disease, exerciseList]);
 
     return (
         <div>
