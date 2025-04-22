@@ -9,7 +9,7 @@ const Introduction = () => {
                         alt="intoImage"></img>
                 </div>
                 <div className="intro">
-                    <h1 className="Intro_h1">FIT BUDDY</h1>
+                    <h1 className="Intro_h1">FITNESS BUDDY</h1>
                     <pre className="Intro_h2">
                         <b>
                             "Y O U R  F I T N E S S  J O U R N E Y  S T A R T S  H E

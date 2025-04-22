@@ -1,5 +1,5 @@
 import { signInWithEmailAndPassword } from "firebase/auth";
-import { useContext, useState ,useEffect} from "react";
+import { useContext, useState, useEffect } from "react";
 import { auth, db } from "../Firebase";
 import { useNavigate } from "react-router-dom";
 import { DataContext } from "../DataContext";
@@ -10,14 +10,13 @@ const Login = () => {
     const [errorMessage, setErrorMessage] = useState("");
     const [loading, setLoading] = useState(false);
     const navigate = useNavigate();
-    const {  setData } = useContext(DataContext);
-useEffect(()=>{
-    setTimeout(()=>{
-        setErrorMessage("");
-    },4000)
-},[errorMessage])
+    const { setData } = useContext(DataContext);
+    useEffect(() => {
+        setTimeout(() => {
+            setErrorMessage("");
+        }, 4000);
+    }, [errorMessage]);
     const loginHandle = async (e) => {
-        
         e.preventDefault();
         setErrorMessage(""); // Reset error message on new login attempt
         setLoading(true); // Set loading to true
@@ -33,18 +32,19 @@ useEffect(()=>{
                 const snapshot = await get(userRef);
                 if (snapshot.exists()) {
                     setData(snapshot.val());
-                    const userData=snapshot.val();
-                    if(userData.height!==0){
+                    const userData = snapshot.val();
+                    if (userData.height !== 0) {
                         navigate("/");
-                        }else{
-                        navigate("/data")}
+                    } else {
+                        navigate("/data");
+                    }
                 } else {
                     setErrorMessage("User data not found.");
                 }
             } else {
-                await auth.signOut();
-                
+                await auth.signOut(); // Sign out the user if email is not verified
                 setErrorMessage("Please verify your email before logging in.");
+                alert("Please verify your email before logging in.");
             }
         } catch (error) {
             switch (error.code) {
@@ -60,7 +60,6 @@ useEffect(()=>{
                 default:
                     setErrorMessage("An error occurred. Please try again.");
             }
-           
         } finally {
             setLoading(false); // Reset loading state
         }
@@ -91,12 +90,9 @@ useEffect(()=>{
                     className="login_button"
                     onClick={loginHandle}
                     disabled={loading} // Disable button while loading
-                ><b>
-                    {loading ? "Logging In..." : "LOG IN"}
-                    </b>
+                >
+                    <b>{loading ? "Logging In..." : "LOG IN"}</b>
                 </button>
-                <p>OR</p>
-                <div className="login_google">Continue with Google</div>
             </div>
         </div>
     );

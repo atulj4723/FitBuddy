@@ -6,7 +6,7 @@
 body {
     width: 100vw;
     height: 100vh;
-    background-color: rgb(255, 255, 255);
+    background-color: white;
     align-items: center;
     justify-content: center;
     background-position: center;
@@ -107,9 +107,9 @@ body {
     font-size: 50px;
 }
 @media (max-width: 600px) {
-    .page_h{
-    height: 12%;
-    font-size: 20px;
+    .page_h {
+        height: 12%;
+        font-size: 20px;
     }
 }
 .info {
@@ -123,7 +123,7 @@ body {
 }
 @media (max-width: 600px) {
     .info {
-    padding: 10px 15px;
+        padding: 10px 15px;
     }
 }
 .login_button {
@@ -138,7 +138,7 @@ body {
 }
 @media (max-width: 600px) {
     .login_button {
-    width: 10%;
+        width: 10%;
     }
 }
 .login_button:hover {
@@ -166,67 +166,839 @@ footer {
 }
 header {
     width: 100%;
-    height: 45px;
+    height: 50px;
     position: sticky;
     top: 0%;
-    background-color: rgb(255, 0, 0);
+    background-color: red;
     padding-inline: 5px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    color: white;
+    color: black;
+    font-size: 20px;
+    font-weight: 600;
+    z-index: 1000;
+}
+.dumb_h {
+    font-size: 20px;
+    color: black;
 }
 .header_right {
     height: 30px;
     width: 30px;
     border-color: white;
-    background-color: white;
+    background-color: transparent;
     border-radius: 50%;
 }
 .dietcard {
     background: rgb(255, 255, 255);
-    width: 250px;
-    height: 250px;
-    padding: 15px;
+    width: 230px;
+    height: 300px;
+    padding: 10px;
+    margin: 3%;
     border-radius: 10px;
     text-align: center;
-    border:2px solid black;
+    text-transform: uppercase;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+    border: 2px solid black;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     transition: transform 0.3s ease-in-out;
 }
-
-.diet_card:hover {
-    transform: scale(1.05);
-}
-
 .diet_img {
     height: 100px;
 }
-.dietcard diet_name {
-    font-size: 5%;
+.diet_name {
+    font-size: 25px;
+    color: #000000;
+}
+.diet_calories {
+    font-size: 15px;
+    color: #444;
+}
+.diet_time {
+    width: 100%;
+    height: auto;
+    gap: 10px;
+    display: flex;
+    justify-content: center;
+    padding: 7px;
+    cursor: pointer;
     text-transform: uppercase;
 }
-.dietcard diet_calories {
-	font-size: 2%;
+.diet_time1 {
+    width: 50%;
+    height: 50px;
+    gap: 2%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #e2e1e1;
+    flex-direction: column;
+    border: 2px solid #e2e1e1;
+    border-radius: 5px;
+    transition: transform 0.3s ease-in-out;
 }
-.diet_card {
+.diet_time1:hover {
+    transform: scale(1.05);
+}
+.diettime_data {
+    margin-top: 20px;
     display: grid;
-    gap: 1%;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    justify-content: center;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 250px));
+}
+.dietcard:hover {
+    transform: scale(1.05);
 }
 /* Hide arrows in Chrome, Safari, Edge, and Opera */
 input[type="number"]::-webkit-outer-spin-button,
 input[type="number"]::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;
+    /* width: 100px;
+    height: 30px;
+ */
 }
-
 /* Hide arrows in Firefox */
 input[type="number"] {
     -moz-appearance: textfield;
+    /* width: 100px;
+    height: 30px; */
+}
+.height {
+    font-size: 25px;
+    font-weight: 600;
+}
+.weight {
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.home {
+    width: 100vw;
+
+    background-color: rgba(254, 253, 253, 0.962);
+    justify-content: center;
+    align-items: start;
+    margin: auto;
+    display: flex;
+    transition: transform 0.3s ease-in-out;
+    gap: 10;
+}
+.Workouts {
+    width: 300px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1.5rem;
+    text-align: center;
+    color: #080808;
+    font-weight: 600;
+    font-size: 1.25rem;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    flex-direction: column;
+    gap: 20px;
+    background-color: white;
+}
+.dumb {
+    font-size: 40px;
+    color: #000;
+}
+.dieti {
+    font-size: 40px;
+    color: #000;
+}
+.fiti {
+    font-size: 40px;
+    color: #000;
+}
+.schei {
+    font-size: 40px;
+    color: #000;
+}
+.fit {
+    width: 300px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1.5rem;
+    text-align: center;
+    color: #0e0d0d;
+    font-weight: 600;
+    font-size: 1.25rem;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    flex-direction: column;
+    gap: 20px;
+    background-color: white;
+}
+.Diet {
+    width: 300px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1.5rem;
+    text-align: center;
+    color: #080808;
+    font-weight: 600;
+    font-size: 1.25rem;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    flex-direction: column;
+    gap: 20px;
+    background-color: white;
+}
+.Workouts:hover {
+    transform: scale(1.05);
+}
+.Diet:hover {
+    transform: scale(1.05);
+}
+
+.Schedule:hover {
+    transform: scale(1.05);
+}
+.fit:hover {
+    transform: scale(1.05);
+}
+.Schedule {
+    width: 300px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1.5rem;
+    text-align: center;
+    color: #0a0a0a;
+    font-weight: 600;
+    font-size: 1.25rem;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    flex-direction: column;
+    gap: 20px;
+    background-color: white;
+}
+
+.f1 {
+    width: 100vw;
+    height: 38.5vh;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: auto;
+    display: flex;
+    transition: transform 0.3s ease-in-out;
+    gap: 10;
+}
+.f2 {
+    width: 100vw;
+    height: 38.5vh;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: auto;
+    display: flex;
+    transition: transform 0.3s ease-in-out;
+    gap: 10;
+}
+.fit_buddy {
+    width: 100vw;
+    height: 15vh;
+
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+.home_h1 {
+    font-size: 80px;
+    font-weight: 800;
+    color: black;
+}
+.home_h2 {
+    font-size: 10px;
+    padding-right: 20px;
+    color: black;
+}
+.diet {  
+    background-color: white;
+    flex-direction: row;
+    display: flex;
+    justify-content: space-evenly;
+    margin: 1px;
+    height: 20%;
+    width: 80%;
+    display: flex;  
+    justify-content: space-evenly;
+    align-items: center;
+    
+}
+.dataDiv {
+    height: auto;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.eggeaterian {
+    width: 200px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1.5rem;
+    text-align: center;
+    color: #0a0a0a;
+    font-weight: 600;
+    font-size: 1.25rem;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    flex-direction: row;
+    gap: 20px;
+    background-color: white;
+}
+.eggeaterian:hover {
+    transform: scale(1.05);
+}
+.vegeaterian {
+    width: 200px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1.5rem;
+    text-align: center;
+    color: #0a0a0a;
+    font-weight: 600;
+    font-size: 1.25rem;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    flex-direction: row;
+    gap: 20px;
+    background-color: white;
+}
+.vegeaterian:hover {
+    transform: scale(1.05);
+}
+.nonvegeaterian {
+    width: 220px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1.5rem;
+    text-align: center;
+    color: #0a0a0a;
+    font-weight: 600;
+    font-size: 1.25rem;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    flex-direction: row;
+    gap: 20px;
+    background-color: white;
+}
+.nonvegeaterian:hover {
+    transform: scale(1.05);
+}
+.diet_vicon {
+    font-size: 40px;
+    color: #070707;
+}
+.diet_nicon {
+    font-size: 40px;
+    color: rgb(7, 7, 7);
+}
+.diet_eicon {
+    font-size: 40px;
+    color: #0c0c0c;
+}
+.diseaseItem {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+.disease {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    
+}
+.diseaseInput {
+    margin: 5px;
+    text-align: center;
+    font-size: 20px;
+}
+.diseaselist {
+    width: 800px;
+    padding: 5px;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 120px));
+    border-radius: 1.5rem;
+    text-align: center;
+    gap: 5px;
+    color: #0a0a0a;
+    font-weight: 600;
+    font-size: 1.25rem;
+    /* box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); */
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    & ul {
+        width: auto;
+        border-radius: 10px;
+        height: auto;
+    }
+}
+.workout {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+    padding: 2rem;
+    margin: auto;
+    max-width: 1200px;
+    background-color: #ffffff;
+    box-sizing: border-box;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    transition: transform 0.25s ease;
+}
+
+.workout_card {
+    width: 270px;
+    height: 450px;
+    border: 2px solid black;
+    border-radius: 12px;
+    padding: 1.5rem;
+    background-color: #ffffff;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease;
+}
+.workout_card:hover {
+    transform: scale(1.05);
+}
+.workout_vdo {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+    margin-bottom: 1rem;
+}
+.workout_img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+    margin-bottom: 1rem;
+}
+.workout_name {
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-transform: capitalize;
+    text-align: center;
+    margin: 0.5rem 0;
+}
+
+.workout_muscle {
+    font-size: 1rem;
+    color: #444;
+    text-align: center;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+    margin-bottom: 0.5rem;
+}
+.workout_part {
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: #007bff;
+    text-align: center;
+}
+.schedule {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 1.5rem;
+    padding: 2rem;
+    margin: auto;
+    max-width: 1200px;
+    background-color: #ffffff;
+    box-sizing: border-box;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    transition: transform 0.25s ease;
+}
+.schedule_title {
+    text-align: center;
+}
+.active {
+    background-color: black;
+    color: white;
+}
+.profile {
+    max-width: 500px;
+    margin: 130px auto;
+    padding: 30px;
+    background: #f9f9f9;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+.profile_pic {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+.user_name {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #333;
+    text-transform: uppercase;
+}
+.user_data {
+    font-size: 16px;
+    margin: 8px 0;
+    color: #292828;
+    text-transform: capitalize;
+}
+.profile_button {
+    margin: 10px 5px;
+    padding: 10px 20px;
+    border: none;
+    background-color: #000000;
+    color: white;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.profile_button:hover {
+    background-color: #4b4d4c;
+}
+.main_data_div {
+    display: flex;
+    width: 90vw;
+    
+    padding-right: 20px;
+}
+.height_weight {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 10%;
+    align-items: center;
+    background-color: white;
 }
 .select {
-    background-color: #d32f2f;
+    background-color: #eceaea;
 }
 .no {
-    background-color: #f3eeed;
+    background-color: white;
 }
+.workoutdisplay {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 40px;
+    margin: auto;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    max-width: 700px;
+    width: 90%;
+    text-align: center;
+}
+.workout_vdo,
+.workout_img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    object-fit: cover;
+}
+.workout_h {
+    font-size: 28px;
+    color: #ff1111;
+    margin-bottom: 10px;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+.workout_h1 {
+    font-size: 20px;
+    color: rgb(22, 22, 22);
+    margin: 8px 0;
+    text-transform: capitalize;
+}
+.workout_h2 {
+    font-size: 16px;
+    color: #272727;
+    margin: 6px 0;
+    text-align: left;
+    text-transform: capitalize;
+}
+.workout_h2 p {
+    background: rgb(240, 240, 240);
+    padding: 10px;
+    border-radius: 8px;
+    margin-top: 6px;
+}
+.dietdisplay {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 40px;
+    margin: auto;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    max-width: 700px;
+    width: 90%;
+    text-align: center;
+}
+.b1 {
+    margin: 10px 5px;
+    padding: 10px 20px;
+    border: none;
+    background-color: #000000;
+    color: white;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.b1:hover {
+    background-color: #4b4d4c;
+}
+.input_data {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    align-items: center;
+    justify-content: center;
+}
+.inputs {
+    text-align: center;
+    height: 30px;
+    width: 60px;
+    font-size: 16px;
+    border-radius: 8px;
+}
+.inc,
+.dec {
+    text-align: center;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    font-size: 16px;
+    height: 30px;
+    width: 30px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.inc:hover,
+.dec:hover {
+    background-color: #d6d6d6;
+}
+.circle {
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+}
+.flex {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+}
+.under {
+    background-color: #0000ff;
+}
+.healthy {
+    background-color: #00ff00;
+}
+
+.obese {
+    background-color: #ff0000;
+}
+.over {
+    background-color: #ffa500;
+}
+.data_div {
+    gap: 10px;
+}
+.gender {
+    width: 100%;
+    height: 18%;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    border-color: #080808;
+    box-sizing: border-box;
+}
+.male {
+    width: 200px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1.5rem;
+    text-align: center;
+    color: #0a0a0a;
+    font-weight: 600;
+    font-size: 1.25rem;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    flex-direction: row;
+    gap: 20px;
+    background-color: white;
+}
+.female {
+    width: 200px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1.5rem;
+    text-align: center;
+    color: #0a0a0a;
+    font-weight: 600;
+    font-size: 1.25rem;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    flex-direction: row;
+    gap: 20px;
+    background-color: white;
+}
+
+.height {
+    width: 290px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #0a0a0a;
+    font-weight: 600;
+    font-size: 1.25rem;
+    flex-direction: row;
+    gap: 20px;
+}
+.hinput {
+    width: 150px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1.5rem;
+    text-align: center;
+    color: #0a0a0a;
+    font-weight: 600;
+    font-size: 1.25rem;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    flex-direction: row;
+    gap: 20px;
+    background-color: white;
+}
+.weight {
+    width: 250px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #0a0a0a;
+    font-weight: 600;
+    font-size: 1.25rem;
+    flex-direction: row;
+    gap: 20px;
+}
+.iweight {
+    width: 150px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1.5rem;
+    text-align: center;
+    color: #0a0a0a;
+    font-weight: 600;
+    font-size: 1.25rem;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    flex-direction: row;
+    gap: 20px;
+    background-color: white;
+}
+
+.person {
+    font-size: 70px;
+    font-weight: 600;
+    color: #000000;
+    text-align: center;
+}
+.fitnessactivity {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+.flex1 {
+    weight: 400px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    transition: background-color 0.3s ease;
+}
+.flex2 {
+    weight: 500px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    transition: background-color 0.3s ease;
+}
+.home_h11 {
+    font-size: 50px;
+    color: black;
+    justify-content: center;
+    text-align: center;
+    padding-bottom: 40px;
+}
+.data_d {
+    font-size: 25px;
+    font-weight: 700;
+    color: black;
+    text-shadow: #272727;
+    text-align: center;
+    padding-bottom: 40px;
+}
+

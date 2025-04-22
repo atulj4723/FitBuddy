@@ -1,0 +1,82 @@
+import React, { useState, useEffect } from "react";
+import { PieChart, Pie, Cell } from "recharts";
+
+const COLORS = ["#00ff00", "#fff"];
+
+export default function Calories({ totalCalories, remaining }) {
+    const [value1, setValue1] = useState(0);
+    const [value2, setValue2] = useState(0);
+
+    // Update state when props change
+    useEffect(() => {
+        setValue1(totalCalories);
+        setValue2(remaining);
+    }, [totalCalories, remaining]);
+
+    // Data for the PieChart
+    const data = [
+        { name: "Group A", value: value1 },
+        { name: "Group B", value: value2 },
+    ];
+
+    return (
+        <div style={{ textAlign: "center" }}>
+            <PieChart
+                width={200}
+                height={170}
+                style={{ backGroundColor: "red" }}>
+                <Pie
+                    data={data}
+                    cx={90}
+                    cy={90}
+                    startAngle={225}
+                    endAngle={-45}
+                    innerRadius={60}
+                    outerRadius={80}
+                    fill="#8884d8"
+                    paddingAngle={5}
+                    dataKey="value"
+                    stroke="#000" // Border color
+                    strokeWidth={0.5}>
+                    {data.map((entry, index) => (
+                        <Cell
+                            key={`cell-${index}`}
+                            fill={COLORS[index % COLORS.length]}
+                        />
+                    ))}
+                </Pie>
+                {/* Display values at the center of the circle */}
+                <text
+                    x={95}
+                    y={90}
+                    textAnchor="middle"
+                    dominantBaseline="middle"
+                    fontSize="16"
+                    fontWeight="bold"
+                    fill="#333">
+                    {value1}/
+                </text>
+                <text
+                    x={95}
+                    y={110}
+                    textAnchor="middle"
+                    dominantBaseline="middle"
+                    fontSize="16"
+                    fontWeight="bold"
+                    fill="#333">
+                    {value2 + value1}
+                </text>
+                <text
+                    x={95}
+                    y={125}
+                    textAnchor="middle"
+                    dominantBaseline="middle"
+                    fontSize="16"
+                    fontWeight="bold"
+                    fill="#333">
+                    Calories
+                </text>
+            </PieChart>
+        </div>
+    );
+}

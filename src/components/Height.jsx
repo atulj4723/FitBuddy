@@ -1,14 +1,16 @@
-const Height = ({ setHeight,height }) => {
+const Height = ({ setHeight, height }) => {
     return (
-        <div className="">
-            height
-            <input
+        <div className="height">
+            
+            Height :
+            <input className="hinput"
                 type="number"
-				value={height}
+                value={height}
                 onChange={(e) => {
                     setHeight(e.target.value);
                 }}
             />
+        cm
         </div>
     );
 };

@@ -5,12 +5,15 @@ import {
 } from "firebase/auth";
 import { auth, db } from "../Firebase";
 import { ref, set } from "firebase/database";
+import { useNavigate } from "react-router-dom";
 const SignUp = () => {
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [errorMsg, setErrorMsg] = useState("");
     const [confirmPassword, setConfirmPassword] = useState("");
+    const navigate = useNavigate();
+
     useEffect(() => {
         setTimeout(() => {
             setErrorMsg("");
@@ -35,10 +38,13 @@ const SignUp = () => {
                     disease: "[]",
                     preferedDiet: "[]",
                     preferedWorkOut: "[]",
+                    gender: "",
                 });
                 sendEmailVerification(user);
                 //add toastify to display email verification link is sent
+                alert("Email verification link has been sent.");
                 auth.signOut();
+                navigate("/login"); // Redirect to login page after sign up
             })
             .catch((error) => {
                 switch (error.code) {
@@ -106,8 +112,6 @@ const SignUp = () => {
             <button className="login_button" onClick={(e) => handleSignUp(e)}>
                 <b>SIGN UP</b>
             </button>
-            OR
-            <div className="login_google">Continue with Google</div>
         </div>
     );
 };

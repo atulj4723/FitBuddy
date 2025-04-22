@@ -1,14 +1,16 @@
 const Weight = ({ setWeight,weight }) => {
     return (
-        <div className="">
-            Weight
-            <input
+        <div className="weight">
+            
+            Weight:
+            <input className="iweight"
                 type="number"
 				value={weight}
                 onChange={(e) => {
                     setWeight(e.target.value);
                 }}
-            />
+                
+            />kg
         </div>
     );
 };

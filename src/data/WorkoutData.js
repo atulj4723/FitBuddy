@@ -2,7 +2,7 @@ const WorkoutData = [
     {
         bodyPart: "waist",
         equipment: "body weight",
-        gifUrl: "https://v2.exercisedb.io/image/ihvX-B72p-Xd-h",
+        gifUrl: "./images/exercise/4 sit up.mp4",
         id: 1,
         name: "3/4 sit-up",
         target: "abs",
@@ -18,7 +18,7 @@ const WorkoutData = [
     {
         bodyPart: "waist",
         equipment: "body weight",
-        gifUrl: "https://v2.exercisedb.io/image/2eQm8-jTjguZdk",
+        gifUrl: "./images/exercise/45 degree side bend.mp4",
         id: 2,
         name: "45° side bend",
         target: "abs",
@@ -34,7 +34,7 @@ const WorkoutData = [
     {
         bodyPart: "waist",
         equipment: "body weight",
-        gifUrl: "https://v2.exercisedb.io/image/J1xdkbISBe4EMo",
+        gifUrl: "./images/exercise/air bike.mp4",
         id: 3,
         name: "air bike",
         target: "abs",
@@ -50,7 +50,7 @@ const WorkoutData = [
     {
         bodyPart: "waist",
         equipment: "body weight",
-        gifUrl: "https://v2.exercisedb.io/image/2yenfHqgzZXdoq",
+        gifUrl: "./images/exercise/alternate heel touchers.mp4",
         id: 4,
         name: "alternate heel touchers",
         target: "abs",
@@ -66,7 +66,7 @@ const WorkoutData = [
     {
         bodyPart: "waist",
         equipment: "assisted",
-        gifUrl: "https://v2.exercisedb.io/image/m9vWKHOyVNO1E-",
+        gifUrl: "./images/exercise/assisted hanging knee raise with throw down.mp4",
         id: 5,
         name: "assisted hanging knee raise with throw down",
         target: "abs",
@@ -81,7 +81,7 @@ const WorkoutData = [
     {
         bodyPart: "waist",
         equipment: "assisted",
-        gifUrl: "https://v2.exercisedb.io/image/PHBEUboVCTpAup",
+        gifUrl: "./images/exercise/assisted hanging knee raise.mp4",
         id: 6,
         name: "assisted hanging knee raise",
         target: "abs",
@@ -97,7 +97,7 @@ const WorkoutData = [
     {
         bodyPart: "waist",
         equipment: "assisted",
-        gifUrl: "https://v2.exercisedb.io/image/9SXh5Pp-lnBDfi",
+        gifUrl: "./images/exercise/assisted lying leg raise with lateral throw down.mp4",
         id: 7,
         name: "assisted lying leg raise with lateral throw down",
         target: "abs",
@@ -115,7 +115,7 @@ const WorkoutData = [
     {
         bodyPart: "waist",
         equipment: "assisted",
-        gifUrl: "https://v2.exercisedb.io/image/j9BNOunyLTNCXM",
+        gifUrl: "./images/exercise/assisted lying leg raise with throw down.mp4",
         id: 8,
         name: "assisted lying leg raise with throw down",
         target: "abs",
@@ -134,7 +134,7 @@ const WorkoutData = [
     {
         bodyPart: "back",
         equipment: "cable",
-        gifUrl: "https://images.app.goo.gl/VBqWcFLE1ZAjAiY39",
+        gifUrl: "./images/exercise/alternate lateral pulldown.mp4",
         id: 9,
         name: "alternate lateral pulldown",
         target: "lats",
@@ -150,7 +150,7 @@ const WorkoutData = [
     {
         bodyPart: "back",
         equipment: "leverage machine",
-        gifUrl: "https://images.app.goo.gl/PGiVGnaTDwqaeMvz7",
+        gifUrl: "./images/exercise/assisted parallel close grip pull-up.gif",
         id: 10,
         name: "assisted parallel close grip pull-up",
         target: "lats",
@@ -168,7 +168,7 @@ const WorkoutData = [
     {
         bodyPart: "back",
         equipment: "leverage machine",
-        gifUrl: "https://images.app.goo.gl/qBg77ceBbJZwrTj87",
+        gifUrl: "./images/exercise/assisted pull-up.gif",
         id: 11,
         name: "assisted pull-up",
         target: "lats",
@@ -186,7 +186,7 @@ const WorkoutData = [
     {
         bodyPart: "back",
         equipment: "barbell",
-        gifUrl: "https://images.app.goo.gl/axL5xtrou9koLPDw5",
+        gifUrl: "./images/exercise/barbell pullover to press.mp4",
         id: 12,
         name: "barbell pullover to press",
         target: "lats",
@@ -202,7 +202,7 @@ const WorkoutData = [
     {
         bodyPart: "back",
         equipment: "barbell",
-        gifUrl: "https://images.app.goo.gl/6w1QqUgnP1Fts1sz7",
+        gifUrl: "./images/exercise/barbell bent over row.mp4",
         id: 13,
         name: "barbell bent over row",
         target: "upper back",
@@ -219,7 +219,7 @@ const WorkoutData = [
     {
         bodyPart: "back",
         equipment: "barbell",
-        gifUrl: "https://images.app.goo.gl/MNwoTCBY926hmDBW8",
+        gifUrl: "./images/exercise/barbell decline bent arm pullover.mp4",
         id: 14,
         name: "barbell decline bent arm pullover",
         target: "lats",
@@ -235,7 +235,7 @@ const WorkoutData = [
     {
         bodyPart: "back",
         equipment: "barbell",
-        gifUrl: "https://images.app.goo.gl/Ct6SisJ7Edm3HPX77",
+        gifUrl: "./images/exercise/barbell decline wide-grip pullover.mp4",
         id: 15,
         name: "barbell decline wide-grip pullover",
         target: "lats",
@@ -251,7 +251,7 @@ const WorkoutData = [
     {
         bodyPart: "back",
         equipment: "barbell",
-        gifUrl: "https://images.app.goo.gl/ugbAWcMJ855mqrqE8",
+        gifUrl: "./images/exercise/barbell incline row.mp4",
         id: 16,
         name: "barbell incline row",
         target: "upper back",
@@ -269,7 +269,7 @@ const WorkoutData = [
     {
         bodyPart: "back",
         equipment: "Dumbell",
-        gifUrl: "https://images.app.goo.gl/KLAnXctmGQPPKS5J9",
+        gifUrl: "./images/exercise/Dumbell arm bent over row.mp4",
         id: 17,
         name: "Dumbell arm bent over row",
         target: "upper back",
@@ -285,7 +285,7 @@ const WorkoutData = [
     {
         bodyPart: "cardio",
         equipment: "body weight",
-        gifUrl: "https://v2.exercisedb.io/image/f1ci2JosH-E4jY",
+        gifUrl: "./images/exercise/jack burpee.mp4",
         id: 18,
         name: "jack burpee",
         target: "cardiovascular system",
@@ -310,7 +310,7 @@ const WorkoutData = [
     {
         bodyPart: "cardio",
         equipment: "body weight",
-        gifUrl: "https://v2.exercisedb.io/image/87YQmcx6tJ07SJ",
+        gifUrl: "./images/exercise/mountain climber.mp4",
         id: 19,
         name: "mountain climber",
         target: "cardiovascular system",
@@ -326,7 +326,7 @@ const WorkoutData = [
     {
         bodyPart: "cardio",
         equipment: "body weight",
-        gifUrl: "https://v2.exercisedb.io/image/xEbSMjGZxbdkSw",
+        gifUrl: "./images/exercise/run (equipment).mp4",
         id: 20,
         name: "run (equipment)",
         target: "cardiovascular system",
@@ -342,7 +342,7 @@ const WorkoutData = [
     {
         bodyPart: "cardio",
         equipment: "body weight",
-        gifUrl: "https://v2.exercisedb.io/image/pIWGL6eaEsw8Vl",
+        gifUrl: "./images/exercise/run.mp4",
         id: 21,
         name: "run",
         target: "cardiovascular system",
@@ -358,7 +358,7 @@ const WorkoutData = [
     {
         bodyPart: "cardio",
         equipment: "leverage machine",
-        gifUrl: "https://v2.exercisedb.io/image/ubuVsWwnqPMVaj",
+        gifUrl: "./images/exercise/stationary bike walk.mp4",
         id: 22,
         name: "stationary bike walk",
         target: "cardiovascular system",
@@ -376,7 +376,7 @@ const WorkoutData = [
     {
         bodyPart: "cardio",
         equipment: "body weight",
-        gifUrl: "https://v2.exercisedb.io/image/2Vcms17UptSaDO",
+        gifUrl: "./images/exercise/burpee.mp4",
         id: 23,
         name: "burpee",
         target: "cardiovascular system",
@@ -400,7 +400,7 @@ const WorkoutData = [
     {
         bodyPart: "cardio",
         equipment: "dumbbell",
-        gifUrl: "https://v2.exercisedb.io/image/h-dBLGl3JtJmGM",
+        gifUrl: "./images/exercise/dumbbell burpee.mp4",
         id: 24,
         name: "dumbbell burpee",
         target: "cardiovascular system",
@@ -426,7 +426,7 @@ const WorkoutData = [
     {
         bodyPart: "cardio",
         equipment: "stationary bike",
-        gifUrl: "https://v2.exercisedb.io/image/RSMywqdQGANNgD",
+        gifUrl: "./images/exercise/stationary bike run v. 3.mp4",
         id: 25,
         name: "stationary bike run v. 3",
         target: "cardiovascular system",
@@ -445,7 +445,7 @@ const WorkoutData = [
     {
         bodyPart: "cardio",
         equipment: "elliptical machine",
-        gifUrl: "https://v2.exercisedb.io/image/nJrq16YW3rBeV-",
+        gifUrl: "./images/exercise/walk elliptical cross trainer.mp4",
         id: 26,
         name: "walk elliptical cross trainer",
         target: "cardiovascular system",
@@ -463,7 +463,7 @@ const WorkoutData = [
     {
         bodyPart: "cardio",
         equipment: "stepmill machine",
-        gifUrl: "https://v2.exercisedb.io/image/farAFjS1cPhKxy",
+        gifUrl: "./images/exercise/walking on stepmill.mp4",
         id: 27,
         name: "walking on stepmill",
         target: "cardiovascular system",
@@ -481,7 +481,7 @@ const WorkoutData = [
     {
         bodyPart: "chest",
         equipment: "leverage machine",
-        gifUrl: "https://v2.exercisedb.io/image/-KYuFKSq4mn33o",
+        gifUrl: "./images/exercise/assisted chest dip (kneeling).mp4",
         id: 28,
         name: "assisted chest dip (kneeling)",
         target: "pectorals",
@@ -497,7 +497,7 @@ const WorkoutData = [
     {
         bodyPart: "chest",
         equipment: "barbell",
-        gifUrl: "https://v2.exercisedb.io/image/svcReUEjdlOFHg",
+        gifUrl: "./images/exercise/barbell bench press.mp4",
         id: 29,
         name: "barbell bench press",
         target: "pectorals",
@@ -515,7 +515,7 @@ const WorkoutData = [
     {
         bodyPart: "chest",
         equipment: "barbell",
-        gifUrl: "https://v2.exercisedb.io/image/uS1HG5l0whe-8t",
+        gifUrl: "./images/exercise/barbell decline bench press.mp4",
         id: 30,
         name: "barbell decline bench press",
         target: "pectorals",
@@ -531,7 +531,7 @@ const WorkoutData = [
     {
         bodyPart: "chest",
         equipment: "barbell",
-        gifUrl: "https://v2.exercisedb.io/image/kPA5kRpz1w7TYL",
+        gifUrl: "./images/exercise/barbell decline wide-grip press.mp4",
         id: 31,
         name: "barbell decline wide-grip press",
         target: "pectorals",
@@ -547,7 +547,7 @@ const WorkoutData = [
     {
         bodyPart: "chest",
         equipment: "barbell",
-        gifUrl: "https://v2.exercisedb.io/image/zqN33vCMds5vjj",
+        gifUrl: "./images/exercise/barbell front raise and pullover.mp4",
         id: 32,
         name: "barbell front raise and pullover",
         target: "pectorals",
@@ -564,7 +564,7 @@ const WorkoutData = [
     {
         bodyPart: "chest",
         equipment: "barbell",
-        gifUrl: "https://v2.exercisedb.io/image/untDWO5vqRTjm6",
+        gifUrl: "./images/exercise/barbell guillotine bench press.mp4",
         id: 33,
         name: "barbell guillotine bench press",
         target: "pectorals",
@@ -581,7 +581,7 @@ const WorkoutData = [
     {
         bodyPart: "chest",
         equipment: "barbell",
-        gifUrl: "https://v2.exercisedb.io/image/XJ7R2EGYkUyMB4",
+        gifUrl: "./images/exercise/barbell incline bench press.mp4",
         id: 34,
         name: "barbell incline bench press",
         target: "pectorals",
@@ -598,7 +598,7 @@ const WorkoutData = [
     {
         bodyPart: "chest",
         equipment: "barbell",
-        gifUrl: "https://v2.exercisedb.io/image/k4c6pgjBYUHXY4",
+        gifUrl: "./images/exercise/barbell incline shoulder raise.mp4",
         id: 35,
         name: "barbell incline shoulder raise",
         target: "serratus anterior",
@@ -616,7 +616,7 @@ const WorkoutData = [
     {
         bodyPart: "chest",
         equipment: "barbell",
-        gifUrl: "https://v2.exercisedb.io/image/EDynqBcoi8oMkC",
+        gifUrl: "./images/exercise/barbell wide bench press.mp4",
         id: 36,
         name: "barbell wide bench press",
         target: "pectorals",
@@ -633,7 +633,7 @@ const WorkoutData = [
     {
         bodyPart: "chest",
         equipment: "cable",
-        gifUrl: "https://v2.exercisedb.io/image/kypVgbvZE755Ug",
+        gifUrl: "./images/exercise/cable bench press.mp4",
         id: 37,
         name: "cable bench press",
         target: "pectorals",
@@ -652,7 +652,7 @@ const WorkoutData = [
     {
         bodyPart: "lower arms",
         equipment: "barbell",
-        gifUrl: "https://v2.exercisedb.io/image/20hnUvS-fOZ2MR",
+        gifUrl: "./images/exercise/barbell revers wrist curl v. 2.mp4",
         id: 38,
         name: "barbell revers wrist curl v. 2",
         target: "forearms",
@@ -669,7 +669,7 @@ const WorkoutData = [
     {
         bodyPart: "lower arms",
         equipment: "barbell",
-        gifUrl: "https://v2.exercisedb.io/image/T4BPFLIfD315gR",
+        gifUrl: "./images/exercise/barbell reverse wrist curl.mp4",
         id: 39,
         name: "barbell reverse wrist curl",
         target: "forearms",
@@ -685,7 +685,7 @@ const WorkoutData = [
     {
         bodyPart: "lower arms",
         equipment: "barbell",
-        gifUrl: "https://v2.exercisedb.io/image/vkK33VtAwOckiK",
+        gifUrl: "./images/exercise/barbell standing back wrist curl.mp4",
         id: 40,
         name: "barbell standing back wrist curl",
         target: "forearms",
@@ -701,7 +701,7 @@ const WorkoutData = [
     {
         bodyPart: "lower arms",
         equipment: "barbell",
-        gifUrl: "https://v2.exercisedb.io/image/OgOU6v2iKhO4st",
+        gifUrl: "./images/exercise/barbell wrist curl v. 2.mp4",
         id: 41,
         name: "barbell wrist curl v. 2",
         target: "forearms",
@@ -718,7 +718,7 @@ const WorkoutData = [
     {
         bodyPart: "lower arms",
         equipment: "barbell",
-        gifUrl: "https://v2.exercisedb.io/image/u0hTS64ugPn4ur",
+        gifUrl: "./images/exercise/barbell wrist curl.mp4",
         id: 42,
         name: "barbell wrist curl",
         target: "forearms",
@@ -734,7 +734,7 @@ const WorkoutData = [
     {
         bodyPart: "lower arms",
         equipment: "cable",
-        gifUrl: "https://v2.exercisedb.io/image/liFbJ3JTF659tF",
+        gifUrl: "./images/exercise/cable reverse wrist curl.mp4",
         id: 43,
         name: "cable reverse wrist curl",
         target: "forearms",
@@ -751,7 +751,7 @@ const WorkoutData = [
     {
         bodyPart: "lower arms",
         equipment: "cable",
-        gifUrl: "https://v2.exercisedb.io/image/tp-vX9LCOfWWAq",
+        gifUrl: "./images/exercise/cable standing back wrist curl.mp4",
         id: 44,
         name: "cable standing back wrist curl",
         target: "forearms",
@@ -768,7 +768,7 @@ const WorkoutData = [
     {
         bodyPart: "lower arms",
         equipment: "cable",
-        gifUrl: "https://v2.exercisedb.io/image/TnUcM8DJORrhD7",
+        gifUrl: "./images/exercise/cable wrist curl.mp4",
         id: 45,
         name: "cable wrist curl",
         target: "forearms",
@@ -786,7 +786,7 @@ const WorkoutData = [
     {
         bodyPart: "lower arms",
         equipment: "dumbbell",
-        gifUrl: "https://v2.exercisedb.io/image/jM2i0ZrC4SrKF-",
+        gifUrl: "./images/exercise/dumbbell lying pronation.mp4",
         id: 46,
         name: "dumbbell lying pronation",
         target: "forearms",
@@ -802,7 +802,7 @@ const WorkoutData = [
     {
         bodyPart: "lower arms",
         equipment: "dumbbell",
-        gifUrl: "https://v2.exercisedb.io/image/WxtlUIti58HCm8",
+        gifUrl: "./images/exercise/dumbbell lying supination.mp4",
         id: 47,
         name: "dumbbell lying supination",
         target: "forearms",
@@ -818,7 +818,7 @@ const WorkoutData = [
     {
         bodyPart: "lower legs",
         equipment: "barbell",
-        gifUrl: "https://v2.exercisedb.io/image/ei0q3Q3tby2vgG",
+        gifUrl: "./images/exercise/barbell seated calf raise.mp4",
         id: 48,
         name: "barbell seated calf raise",
         target: "calves",
@@ -835,7 +835,7 @@ const WorkoutData = [
     {
         bodyPart: "lower legs",
         equipment: "barbell",
-        gifUrl: "https://v2.exercisedb.io/image/wsZtnQMBIUFdU5",
+        gifUrl: "./images/exercise/barbell standing leg calf raise.mp4",
         id: 49,
         name: "barbell standing leg calf raise",
         target: "calves",
@@ -850,7 +850,7 @@ const WorkoutData = [
     {
         bodyPart: "lower legs",
         equipment: "barbell",
-        gifUrl: "https://v2.exercisedb.io/image/t60Yg-FC7icfTw",
+        gifUrl: "./images/exercise/barbell standing rocking leg calf raise.mp4",
         id: 50,
         name: "barbell standing rocking leg calf raise",
         target: "calves",
@@ -865,7 +865,7 @@ const WorkoutData = [
     {
         bodyPart: "lower legs",
         equipment: "body weight",
-        gifUrl: "https://v2.exercisedb.io/image/5VXwg1FlghO6he",
+        gifUrl: "./images/exercise/circles knee stretch.mp4",
         id: 51,
         name: "circles knee stretch",
         target: "calves",
@@ -880,7 +880,7 @@ const WorkoutData = [
     {
         bodyPart: "lower legs",
         equipment: "body weight",
-        gifUrl: "https://v2.exercisedb.io/image/trLRjV9FdFynYP",
+        gifUrl: "./images/exercise/donkey calf raise.mp4",
         id: 52,
         name: "donkey calf raise",
         target: "calves",
@@ -896,7 +896,7 @@ const WorkoutData = [
     {
         bodyPart: "lower legs",
         equipment: "dumbbell",
-        gifUrl: "https://v2.exercisedb.io/image/aUK9nSsRXw-xei",
+        gifUrl: "./images/exercise/dumbbell seated one leg calf raise.mp4",
         id: 53,
         name: "dumbbell seated one leg calf raise",
         target: "calves",
@@ -913,7 +913,7 @@ const WorkoutData = [
     {
         bodyPart: "lower legs",
         equipment: "dumbbell",
-        gifUrl: "https://v2.exercisedb.io/image/9pxOpd09tfeBfs",
+        gifUrl: "./images/exercise/dumbbell single leg calf raise.mp4",
         id: 54,
         name: "dumbbell single leg calf raise",
         target: "calves",
@@ -929,7 +929,7 @@ const WorkoutData = [
     {
         bodyPart: "lower legs",
         equipment: "dumbbell",
-        gifUrl: "https://v2.exercisedb.io/image/SJvheXll9PBqlO",
+        gifUrl: "./images/exercise/dumbbell standing calf raise.gif",
         id: 55,
         name: "dumbbell standing calf raise",
         target: "calves",
@@ -944,7 +944,7 @@ const WorkoutData = [
     {
         bodyPart: "lower legs",
         equipment: "leverage machine",
-        gifUrl: "https://v2.exercisedb.io/image/NaWKl7hP0vgWzv",
+        gifUrl: "./images/exercise/lever seated calf raise.mp4",
         id: 56,
         name: "lever seated calf raise",
         target: "calves",
@@ -961,7 +961,7 @@ const WorkoutData = [
     {
         bodyPart: "lower legs",
         equipment: "leverage machine",
-        gifUrl: "https://v2.exercisedb.io/image/S8WTXrC-qBQXYb",
+        gifUrl: "./images/exercise/lever standing calf raise.mp4",
         id: 57,
         name: "lever standing calf raise",
         target: "calves",
@@ -977,7 +977,7 @@ const WorkoutData = [
     {
         bodyPart: "shoulders",
         equipment: "barbell",
-        gifUrl: "https://v2.exercisedb.io/image/T9RvFuv7eBuZOY",
+        gifUrl: "./images/exercise/barbell front raise.mp4",
         id: 58,
         name: "barbell front raise",
         target: "delts",
@@ -992,7 +992,7 @@ const WorkoutData = [
     {
         bodyPart: "shoulders",
         equipment: "barbell",
-        gifUrl: "https://v2.exercisedb.io/image/iXu6p5r2Cr9ebk",
+        gifUrl: "./images/exercise/barbell one arm snatch.mp4",
         id: 59,
         name: "barbell one arm snatch",
         target: "delts",
@@ -1011,7 +1011,7 @@ const WorkoutData = [
     {
         bodyPart: "shoulders",
         equipment: "barbell",
-        gifUrl: "https://v2.exercisedb.io/image/DMjiRzzuyDZbTd",
+        gifUrl: "./images/exercise/barbell rear delt raise.mp4",
         id: 60,
         name: "barbell rear delt raise",
         target: "delts",
@@ -1027,7 +1027,7 @@ const WorkoutData = [
     {
         bodyPart: "shoulders",
         equipment: "barbell",
-        gifUrl: "https://v2.exercisedb.io/image/g7sNDI6x-fmkTS",
+        gifUrl: "./images/exercise/barbell rear delt row.mp4",
         id: 61,
         name: "barbell rear delt row",
         target: "delts",
@@ -1044,7 +1044,7 @@ const WorkoutData = [
     {
         bodyPart: "shoulders",
         equipment: "barbell",
-        gifUrl: "https://v2.exercisedb.io/image/QuUcGKTISrSFby",
+        gifUrl: "./images/exercise/barbell seated behind head military press.mp4",
         id: 62,
         name: "barbell seated behind head military press",
         target: "delts",
@@ -1061,7 +1061,7 @@ const WorkoutData = [
     {
         bodyPart: "shoulders",
         equipment: "barbell",
-        gifUrl: "https://v2.exercisedb.io/image/TFQJ1NnFpHqlB-",
+        gifUrl: "./images/exercise/barbell seated bradford rocky press.mp4",
         id: 63,
         name: "barbell seated bradford rocky press",
         target: "delts",
@@ -1077,7 +1077,7 @@ const WorkoutData = [
     {
         bodyPart: "shoulders",
         equipment: "barbell",
-        gifUrl: "https://v2.exercisedb.io/image/WiwXh7omZhcskR",
+        gifUrl: "./images/exercise/barbell seated overhead press.mp4",
         id: 64,
         name: "barbell seated overhead press",
         target: "delts",
@@ -1094,7 +1094,7 @@ const WorkoutData = [
     {
         bodyPart: "shoulders",
         equipment: "barbell",
-        gifUrl: "https://v2.exercisedb.io/image/dNQWU0MtpVCfMF",
+        gifUrl: "./images/exercise/barbell skier.mp4",
         id: 65,
         name: "barbell skier",
         target: "delts",
@@ -1110,7 +1110,7 @@ const WorkoutData = [
     {
         bodyPart: "shoulders",
         equipment: "barbell",
-        gifUrl: "https://v2.exercisedb.io/image/cgSMYlUZUljuFi",
+        gifUrl: "./images/exercise/barbell standing bradford press.mp4",
         id: 66,
         name: "barbell standing bradford press",
         target: "delts",
@@ -1125,7 +1125,7 @@ const WorkoutData = [
     {
         bodyPart: "shoulders",
         equipment: "barbell",
-        gifUrl: "https://v2.exercisedb.io/image/lKeySHPF5Uz7Hz",
+        gifUrl: "./images/exercise/barbell standing front raise over head.mp4",
         id: 67,
         name: "barbell standing front raise over head",
         target: "delts",
@@ -1142,7 +1142,7 @@ const WorkoutData = [
     {
         bodyPart: "upper arms",
         equipment: "assisted",
-        gifUrl: "https://v2.exercisedb.io/image/SMhS9RgyA5zINq",
+        gifUrl: "./images/exercise/assisted standing triceps extension (with towel).mp4",
         id: 68,
         name: "assisted standing triceps extension (with towel)",
         target: "triceps",
@@ -1158,7 +1158,7 @@ const WorkoutData = [
     {
         bodyPart: "upper arms",
         equipment: "leverage machine",
-        gifUrl: "https://v2.exercisedb.io/image/u3mnHrReXXYOr-",
+        gifUrl: "./images/exercise/assisted triceps dip (kneeling).mp4",
         id: 69,
         name: "assisted triceps dip (kneeling)",
         target: "triceps",
@@ -1174,7 +1174,7 @@ const WorkoutData = [
     {
         bodyPart: "upper arms",
         equipment: "barbell",
-        gifUrl: "https://v2.exercisedb.io/image/3uIlyALWUEXFe2",
+        gifUrl: "./images/exercise/barbell alternate biceps curl.mp4",
         id: 70,
         name: "barbell alternate biceps curl",
         target: "biceps",
@@ -1191,7 +1191,7 @@ const WorkoutData = [
     {
         bodyPart: "upper arms",
         equipment: "barbell",
-        gifUrl: "https://v2.exercisedb.io/image/JEAW8AoADWcciO",
+        gifUrl: "./images/exercise/barbell close-grip bench press.mp4",
         id: 71,
         name: "barbell close-grip bench press",
         target: "triceps",
@@ -1208,7 +1208,7 @@ const WorkoutData = [
     {
         bodyPart: "upper arms",
         equipment: "barbell",
-        gifUrl: "https://v2.exercisedb.io/image/XxdL5alwMRaX24",
+        gifUrl: "./images/exercise/barbell curl.gif",
         id: 72,
         name: "barbell curl",
         target: "biceps",
@@ -1225,7 +1225,7 @@ const WorkoutData = [
     {
         bodyPart: "upper arms",
         equipment: "barbell",
-        gifUrl: "https://v2.exercisedb.io/image/ojPvNoyrHMek66",
+        gifUrl: "./images/exercise/barbell decline close grip to skull press.mp4",
         id: 73,
         name: "barbell decline close grip to skull press",
         target: "triceps",
@@ -1240,7 +1240,7 @@ const WorkoutData = [
     {
         bodyPart: "upper arms",
         equipment: "barbell",
-        gifUrl: "https://v2.exercisedb.io/image/QV1-i0kPcZmF4I",
+        gifUrl: "./images/exercise/barbell drag curl.gif",
         id: 74,
         name: "barbell drag curl",
         target: "biceps",
@@ -1256,7 +1256,7 @@ const WorkoutData = [
     {
         bodyPart: "upper arms",
         equipment: "barbell",
-        gifUrl: "https://v2.exercisedb.io/image/1d2p04ufeE899T",
+        gifUrl: "./images/exercise/barbell incline reverse-grip press.webp",
         id: 75,
         name: "barbell incline reverse-grip press",
         target: "triceps",
@@ -1272,7 +1272,7 @@ const WorkoutData = [
     {
         bodyPart: "upper arms",
         equipment: "barbell",
-        gifUrl: "https://v2.exercisedb.io/image/f3KstQ7GYGD6jI",
+        gifUrl: "./images/exercise/barbell jm bench press.gif",
         id: 76,
         name: "barbell jm bench press",
         target: "triceps",
@@ -1288,7 +1288,7 @@ const WorkoutData = [
     {
         bodyPart: "upper arms",
         equipment: "barbell",
-        gifUrl: "https://v2.exercisedb.io/image/l8whjxJEHnIhrU",
+        gifUrl: "./images/exercise/barbell lying close-grip press.gif",
         id: 77,
         name: "barbell lying close-grip press",
         target: "triceps",
@@ -1305,7 +1305,7 @@ const WorkoutData = [
     {
         bodyPart: "upper legs",
         equipment: "assisted",
-        gifUrl: "https://v2.exercisedb.io/image/w8sFpXFuvYFFly",
+        gifUrl: "./images/exercise/assisted prone hamstring.gif",
         id: 78,
         name: "assisted prone hamstring",
         target: "hamstrings",
@@ -1321,7 +1321,7 @@ const WorkoutData = [
     {
         bodyPart: "upper legs",
         equipment: "body weight",
-        gifUrl: "https://v2.exercisedb.io/image/2jhI6P1Xyky1Jm",
+        gifUrl: "./images/exercise/balance board.mp4",
         id: 79,
         name: "balance board",
         target: "quads",
@@ -1337,7 +1337,7 @@ const WorkoutData = [
     {
         bodyPart: "upper legs",
         equipment: "barbell",
-        gifUrl: "https://v2.exercisedb.io/image/irk49yw-vvx3wF",
+        gifUrl: "./images/exercise/barbell bench front squat.mp4",
         id: 80,
         name: "barbell bench front squat",
         target: "quads",
@@ -1353,7 +1353,7 @@ const WorkoutData = [
     {
         bodyPart: "upper legs",
         equipment: "barbell",
-        gifUrl: "https://v2.exercisedb.io/image/ooaS3X346vUxmt",
+        gifUrl: "./images/exercise/barbell bench squat.mp4",
         id: 81,
         name: "barbell bench squat",
         target: "quads",
@@ -1372,7 +1372,7 @@ const WorkoutData = [
     {
         bodyPart: "upper legs",
         equipment: "barbell",
-        gifUrl: "https://v2.exercisedb.io/image/8IXt8RanKUixS9",
+        gifUrl: "./images/exercise/barbell clean and press.mp4",
         id: 82,
         name: "barbell clean and press",
         target: "quads",
@@ -1390,7 +1390,7 @@ const WorkoutData = [
     {
         bodyPart: "upper legs",
         equipment: "barbell",
-        gifUrl: "https://v2.exercisedb.io/image/2SgyeNr6WNTrYZ",
+        gifUrl: "./images/exercise/barbell clean-grip front squat.mp4",
         id: 83,
         name: "barbell clean-grip front squat",
         target: "glutes",
@@ -1407,7 +1407,7 @@ const WorkoutData = [
     {
         bodyPart: "upper legs",
         equipment: "barbell",
-        gifUrl: "https://v2.exercisedb.io/image/Fh5HUXy7P00dB7",
+        gifUrl: "./images/exercise/barbell deadlift.mp4",
         id: 84,
         name: "barbell deadlift",
         target: "glutes",
@@ -1424,7 +1424,7 @@ const WorkoutData = [
     {
         bodyPart: "upper legs",
         equipment: "barbell",
-        gifUrl: "https://v2.exercisedb.io/image/Wl1pgLBaUyVmUB",
+        gifUrl: "./images/exercise/barbell front chest squat.mp4",
         id: 85,
         name: "barbell front chest squat",
         target: "glutes",
@@ -1441,7 +1441,7 @@ const WorkoutData = [
     {
         bodyPart: "upper legs",
         equipment: "barbell",
-        gifUrl: "https://v2.exercisedb.io/image/W7186oPF1MGRwI",
+        gifUrl: "./images/exercise/barbell front squat.mp4",
         id: 86,
         name: "barbell front squat",
         target: "glutes",
@@ -1458,7 +1458,7 @@ const WorkoutData = [
     {
         bodyPart: "upper legs",
         equipment: "barbell",
-        gifUrl: "https://v2.exercisedb.io/image/AOA-Z7oGepnoDS",
+        gifUrl: "./images/exercise/barbell full squat.mp4",
         id: 87,
         name: "barbell full squat",
         target: "glutes",
