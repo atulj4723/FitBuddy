@@ -13,7 +13,8 @@ const Profile = () => {
             <h1 className="user_name">{"" || data.username}</h1>
             <pre className="user_data">Height: {data.height} cm.</pre>
             <pre className="user_data">Weight: {data.weight} kg.</pre>
-            <pre className="user_data">Gender : {data.gender}</pre>
+            <pre className="user_data">Gender : {data.gender}</pre>{" "}
+            <pre className="user_data">Age: {data.age} years.</pre>
             <pre className="user_data">Diet : {data.diet}</pre>
             <pre className="user_data">Goal : {data.goal}</pre>
             <pre className="user_data">

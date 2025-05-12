@@ -15,6 +15,7 @@ import { useNavigate } from "react-router-dom";
 import Gender from "../components/Gender";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPerson, faPersonDress } from "@fortawesome/free-solid-svg-icons";
+import Age from "../components/Age";
 
 const Data = () => {
     const { data, setData } = useContext(DataContext);
@@ -25,6 +26,7 @@ const Data = () => {
     const [gender, setGender] = useState(data.gender || "");
     const [dataSaved, setDataSaved] = useState(false);
     const [goal, setGoal] = useState(data.goal || "");
+    const [age, setAge] = useState(data.age || 0);
     const [preferedDiet, setPreferedDiet] = useState(
         JSON.parse(data.preferedDiet) || []
     );
@@ -58,6 +60,7 @@ const Data = () => {
             preferedWorkOut: JSON.stringify(preferedWorkOut),
             goal: goal,
             gender: gender,
+            age: age,
         });
         setDataSaved(true);
         const userRef = ref(db, data.id);
@@ -69,13 +72,36 @@ const Data = () => {
 
     // Trigger filtering and saving when step === 5
 
-    const loadFilteredData = () => {
+    const loadFilteredData = async () => {
+        if (height <= 0 || weight <= 0 || age <= 0 || !diet || !gender) {
+            alert("Please fill all fields with valid values.");
+            return;
+        }
         if (weight > 0 && height > 0 && diet.length > 0 && goal.length > 0) {
-            const filteredExercises = getFilteredExercises(disease);
-            const filteredDiet = getFilteredDiet(disease);
-            setPreferedDiet(filteredDiet);
-            setPreferedWorkOut(filteredExercises);
-            saveToDb(); // Trigger Firebase save
+            try {
+                const filteredExercises = await ChatGptWorkout(
+                    exerciseList,
+                    disease,
+                    height,
+                    weight,
+                    goal,
+                    age
+                );
+                const filteredDiet = await ChatGptDiet(
+                    dietList,
+                    diet,
+                    disease,
+                    height,
+                    weight,
+                    goal,
+                    age
+                );
+                setPreferedDiet(filteredDiet);
+                setPreferedWorkOut(filteredExercises);
+                saveToDb(); // Trigger Firebase save
+            } catch (error) {
+                console.error("Error fetching AI data:", error.message);
+            }
         }
     };
 
@@ -515,47 +541,14 @@ const Data = () => {
             setGoal("Maintain Weight");
         }
     }, [weight, height]);
-    // useEffect(() => {
-    //     if (
-    //         step === 5 &&
-    //         weight > 0 &&
-    //         height > 0 &&
-    //         diet.length > 0 &&
-    //         goal.length > 0
-    //     ) {
-    //         const load_data = async () => {
-    //             try {
-    //                 const filteredDiet = await ChatGptDiet(
-    //                     dietList,
-    //                     disease,
-    //                     height,
-    //                     weight,
-    //                     goal
-    //                 );
-    //                 setPreferedDiet(filteredDiet);
-    //                 const filteredWorkout = await ChatGptWorkout(
-    //                     exerciseList,
-    //                     height,
-    //                     weight,
-    //                     disease,
-    //                     goal
-    //                 );
-    //                 setPreferedWorkOut(filteredWorkout);
-    //                 setSaveData(true); // Trigger Firebase save
-    //             } catch (error) {
-    //                 console.error("Error fetching AI data:", error.message);
-    //             }
-    //         };
-    //         load_data();
-    //     }
-    // }, [step, weight, height, diet, goal, dietList, disease, exerciseList]);
-    // if (dataSaved) {
-    //     // Show a message or redirect the user after saving data
-    //     setTimeout(() => {
-    //         navigate("/");
-    //     }, 20000); // Reload the page after 2 seconds
-    //     return <div>Data Saved</div>;
-    // }
+
+    if (dataSaved) {
+        // Show a message or redirect the user after saving data
+        setTimeout(() => {
+            navigate("/");
+        }, 5000); // Redirect after 5 seconds
+        return <div>Data Saved</div>;
+    }
     return (
         <div className="main_data_div">
             <div className="dataDiv">
@@ -563,9 +556,10 @@ const Data = () => {
                 <div className="height_weight">
                     <Height setHeight={setHeight} height={height} />
                     <Weight setWeight={setWeight} weight={weight} />
+                    <Age setAge={setAge} age={age} />
                 </div>
                 <Gender setGender={setGender} gender={gender} />
-                
+
                 <Diet setDiet={setDiet} diet={diet} />
                 <div className="">
                     <Disease setDisease={setDisease} disease={disease} />
@@ -590,6 +584,7 @@ const Data = () => {
                 <h1 className="user_name">{"" || data.username}</h1>
                 <pre className="user_data">Height: {height} cm.</pre>
                 <pre className="user_data">Weight: {weight} kg.</pre>
+                <pre className="user_data">Age: {age} years.</pre>
                 <pre className="user_data">Diet : {diet}</pre>
                 <pre className="user_data">Goal : {goal}</pre>
                 <pre className="user_data">Gender : {gender}</pre>

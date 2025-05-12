@@ -23,7 +23,10 @@ const SignUp = () => {
         e.preventDefault();
         if (password !== confirmPassword) {
             setErrorMsg("Passwords do not match");
-
+            return;
+        }
+        if (password.length < 8) {
+            setErrorMsg("Password must be at least 8 characters long.");
             return;
         }
         createUserWithEmailAndPassword(auth, email, password)
@@ -59,11 +62,9 @@ const SignUp = () => {
                             "Password is too weak. Please choose a stronger password."
                         );
                         break;
-
                     case "auth/missing-email":
                         setErrorMsg("Email is required.");
                         break;
-
                     default:
                         setErrorMsg("An error occurred. Please try again.");
                 }

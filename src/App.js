@@ -12,7 +12,6 @@ import DietDisplay from "./pages/DietDisplay";
 import PageNotFound from "./pages/PageNotFound";
 import Profile from "./pages/Profile";
 import Introduction from "./pages/Introduction";
-import Footer from "./components/Footer";
 import Header from "./components/Header";
 import { auth, db } from "./Firebase";
 import { useContext, useEffect, useState } from "react";

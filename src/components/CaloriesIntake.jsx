@@ -3,20 +3,12 @@ import { PieChart, Pie, Cell } from "recharts";
 
 const COLORS = ["#00ff00", "#fff"];
 
-export default function Calories({ totalCalories, remaining }) {
-    const [value1, setValue1] = useState(0);
-    const [value2, setValue2] = useState(0);
-
-    // Update state when props change
-    useEffect(() => {
-        setValue1(totalCalories);
-        setValue2(remaining);
-    }, [totalCalories, remaining]);
+export default function CaloriesIntake({ totalCalories, remaining }) {
 
     // Data for the PieChart
     const data = [
-        { name: "Group A", value: value1 },
-        { name: "Group B", value: value2 },
+        { name: "Group A", value: totalCalories },
+        { name: "Group B", value: remaining },
     ];
 
     return (
@@ -34,7 +26,7 @@ export default function Calories({ totalCalories, remaining }) {
                     innerRadius={60}
                     outerRadius={80}
                     fill="#8884d8"
-                    paddingAngle={5}
+                    paddingAngle={0}
                     dataKey="value"
                     stroke="#000" // Border color
                     strokeWidth={0.5}>
@@ -54,7 +46,7 @@ export default function Calories({ totalCalories, remaining }) {
                     fontSize="16"
                     fontWeight="bold"
                     fill="#333">
-                    {value1}/
+                    {totalCalories}/
                 </text>
                 <text
                     x={95}
@@ -64,7 +56,7 @@ export default function Calories({ totalCalories, remaining }) {
                     fontSize="16"
                     fontWeight="bold"
                     fill="#333">
-                    {value2 + value1}
+                    {totalCalories + remaining}
                 </text>
                 <text
                     x={95}
@@ -74,7 +66,19 @@ export default function Calories({ totalCalories, remaining }) {
                     fontSize="16"
                     fontWeight="bold"
                     fill="#333">
+                    
                     Calories
+                </text>
+                <text
+                    x={95}
+                    y={140}
+                    textAnchor="middle"
+                    dominantBaseline="middle"
+                    fontSize="16"
+                    fontWeight="bold"
+                    fill="#333">
+                    
+                    Intake
                 </text>
             </PieChart>
         </div>

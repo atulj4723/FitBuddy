@@ -37,7 +37,9 @@ const Disease = ({ disease, setDisease }) => {
                     return (
                         <ul
                             key={idx}
-                            className={`${selected ? "select" : "no"} diseaseItem`}
+                            className={`${
+                                selected ? "select" : "no"
+                            } diseaseItem`}
                             onClick={() => {
                                 handle(cur);
                             }}>
@@ -54,11 +56,10 @@ const Disease = ({ disease, setDisease }) => {
                         setAddDisease(e.target.value);
                     }}
                 />
-                  <button onClick={handleAdd} className="profile_button">
-                Add
-            </button>
+                <button onClick={handleAdd} className="profile_button">
+                    Add
+                </button>
             </div>
-          
         </div>
     );
 };
